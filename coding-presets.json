@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "remoteUrl": "https://github.com/alfaslash/VCI-3-Driver/releases/download/1.0.0/coding-presets.json",
+  "version": "1.1.0",
+  "remoteUrl": "https://github.com/alfaslash/MitsuCodingPresets/releases/download/1.0.0/coding-presets.json",
   "presets": [
     {
       "id": "outlander3_etacs_sawc_enable",
@@ -11,7 +11,13 @@
         "ETACS_83040800"
       ],
       "allowedBodyPrefixes": [
-        "GF2W", "GF3W", "GF4W", "GF6W", "GF7W", "GG2W", "GG3W"
+        "GF2W",
+        "GF3W",
+        "GF4W",
+        "GF6W",
+        "GF7W",
+        "GG2W",
+        "GG3W"
       ],
       "titleEn": "Activate S-AWC (Outlander III)",
       "titleRu": "Активировать S-AWC (Outlander III)",
@@ -31,6 +37,39 @@
           "expectedCoordinateBadge": "B41:b7",
           "targetRawValue": 1,
           "expectedOptionLabelEn": "Available"
+        }
+      ]
+    },
+    {
+      "id": "engine_gas_cruise_control_enable",
+      "kind": "VariantCoding",
+      "allowedEcuNames": [
+        "GAS_02640000",
+        "GAS_0A640000",
+        "GAS_0C640000",
+        "GAS_0D640000",
+        "GAS_0E640000",
+        "GAS_28640000"
+      ],
+      "allowedBodyPrefixes": [],
+      "titleEn": "Activate Cruise Control (Engine MPI/GDI)",
+      "titleRu": "Активировать круиз-контроль (ЭБУ двигателя)",
+      "descriptionEn": "Sets Cruise control = Present and Cruise control option coding = Accept",
+      "descriptionRu": "Устанавливает Cruise control = Present и Cruise control option coding = Accept",
+      "rules": [
+        {
+          "allowedItemLangIds": ["201000028"],
+          "expectedNameEn": "Cruise control",
+          "expectedCoordinateBadge": "B12:b0",
+          "targetRawValue": 1,
+          "expectedOptionLabelEn": "Present"
+        },
+        {
+          "allowedItemLangIds": ["201000029", "201000080"],
+          "expectedNameEn": "Cruise control option coding",
+          "expectedCoordinateBadge": "B13:b0",
+          "targetRawValue": 1,
+          "expectedOptionLabelEn": "Accept"
         }
       ]
     }
