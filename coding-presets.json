@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.0.0",
   "remoteUrl": "https://github.com/alfaslash/MitsuCodingPresets/releases/download/1.0.0/coding-presets.json",
   "presets": [
     {
@@ -70,6 +70,80 @@
           "expectedCoordinateBadge": "B13:b0",
           "targetRawValue": 1,
           "expectedOptionLabelEn": "Accept"
+        }
+      ]
+    },
+    {
+      "id": "etacs_security_alarm_b20_enable",
+      "kind": "VariantCoding",
+      "allowedEcuNames": [
+        "ETACS_83040500",
+        "ETACS_83040801",
+        "ETACS_83040800",
+        "ETACS_83040802"
+      ],
+      "allowedBodyPrefixes": [],
+      "titleEn": "Activate Security Alarm (ETACS)",
+      "titleRu": "Активировать штатную сигнализацию (ETACS)",
+      "descriptionEn": "Sets Security alarm mode = A-spec, Security alarm function = Present (can change), Pre-alarm = Present",
+      "descriptionRu": "Устанавливает Security alarm mode = A-spec, Security alarm function = Present (can change), Pre-alarm = Present",
+      "rules": [
+        {
+          "allowedItemLangIds": ["222900439", "22000392"],
+          "expectedNameEn": "Security alarm mode",
+          "expectedCoordinateBadge": "B20:b4..5",
+          "targetRawValue": 1,
+          "expectedOptionLabelEn": "A-spec|A-spec."
+        },
+        {
+          "allowedItemLangIds": ["222900438", "22000391"],
+          "expectedNameEn": "Security alarm function",
+          "expectedCoordinateBadge": "B20:b2..3",
+          "targetRawValue": 2,
+          "expectedOptionLabelEn": "Present/Chg OK|Present(Can change)"
+        },
+        {
+          "allowedItemLangIds": ["222900426", "22000357"],
+          "expectedNameEn": "Pre-alarm",
+          "expectedCoordinateBadge": "B20:b6",
+          "targetRawValue": 0,
+          "expectedOptionLabelEn": "Present"
+        }
+      ]
+    },
+    {
+      "id": "etacs_security_alarm_b26_enable",
+      "kind": "VariantCoding",
+      "allowedEcuNames": [
+        "ETACS_83040400",
+        "ETACS_83040900"
+      ],
+      "allowedBodyPrefixes": [],
+      "titleEn": "Activate Security Alarm (ETACS)",
+      "titleRu": "Активировать штатную сигнализацию (ETACS)",
+      "descriptionEn": "Sets Security alarm mode = A-spec, Security alarm function = Present (can change), Pre-alarm = Present",
+      "descriptionRu": "Устанавливает Security alarm mode = A-spec, Security alarm function = Present (can change), Pre-alarm = Present",
+      "rules": [
+        {
+          "allowedItemLangIds": ["222900744", "222900439"],
+          "expectedNameEn": "Security alarm mode",
+          "expectedCoordinateBadge": "B26:b3..4",
+          "targetRawValue": 1,
+          "expectedOptionLabelEn": "A-spec"
+        },
+        {
+          "allowedItemLangIds": ["222900743", "222900438"],
+          "expectedNameEn": "Security alarm function",
+          "expectedCoordinateBadge": "B26:b5..6",
+          "targetRawValue": 2,
+          "expectedOptionLabelEn": "Present/Chg OK"
+        },
+        {
+          "allowedItemLangIds": ["222900426"],
+          "expectedNameEn": "Pre-alarm",
+          "expectedCoordinateBadge": "B26:b7",
+          "targetRawValue": 0,
+          "expectedOptionLabelEn": "Present"
         }
       ]
     }
