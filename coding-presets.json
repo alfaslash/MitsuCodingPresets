@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "remoteUrl": "https://github.com/alfaslash/VCI-3-Driver/releases/download/1.0.0/coding-presets.json",
+  "presets": [
+    {
+      "id": "outlander3_etacs_sawc_enable",
+      "kind": "VariantCoding",
+      "allowedEcuNames": [
+        "ETACS_83040500",
+        "ETACS_83040801",
+        "ETACS_83040800"
+      ],
+      "allowedBodyPrefixes": [
+        "GF2W", "GF3W", "GF4W", "GF6W", "GF7W", "GG2W", "GG3W"
+      ],
+      "titleEn": "Activate S-AWC (Outlander III)",
+      "titleRu": "Активировать S-AWC (Outlander III)",
+      "descriptionEn": "Sets S-AWC Brake = Present and S-AWC Control display = Available",
+      "descriptionRu": "Устанавливает S-AWC Brake = Present и S-AWC Control display = Available",
+      "rules": [
+        {
+          "allowedItemLangIds": ["222900648", "22000457"],
+          "expectedNameEn": "S-AWC Brake",
+          "expectedCoordinateBadge": "B54:b5",
+          "targetRawValue": 1,
+          "expectedOptionLabelEn": "Present"
+        },
+        {
+          "allowedItemLangIds": ["222900433", "22000456"],
+          "expectedNameEn": "S-AWC Control display",
+          "expectedCoordinateBadge": "B41:b7",
+          "targetRawValue": 1,
+          "expectedOptionLabelEn": "Available"
+        }
+      ]
+    }
+  ]
+}
